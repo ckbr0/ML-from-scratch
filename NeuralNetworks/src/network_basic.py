@@ -64,6 +64,7 @@ class Network:
         # scheme in the book, used here to take advantage of the fact
         # that Python can use negative indices in lists.
         for l in range(2, self.n_layers):
+            
             z = zs[-l]
             sp = self.activation_function_prime(z)
             delta = np.dot(self.weights[-l+1].transpose(), delta) * sp
