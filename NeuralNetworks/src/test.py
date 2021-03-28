@@ -32,7 +32,7 @@ print(r)
 
 network = Network([784, 32, 10], sigmoid, sigmoid_prime, cost_function_prime)
 for i in range(20):
-    network.stochastic_gradient_descent(training_data, 10, 3.0)
+    network.stochastic_gradient_descent(training_data, 100, 3.0)
 r = network.evaluate(test_data)
 print(r)
 
